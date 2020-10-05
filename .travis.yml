@@ -1,13 +1,19 @@
 language: cpp
 
-os:
-  - linux
-  - osx
+matrix:
+  include:
+    - os: linux
+      compiler:
+      - gcc
+      - clang
 
-compiler:
-  - gcc
-  - clang
+    - os: osx
+      compiler:
+      - clang
 
 script:
-  - mkdir build && cd build
+  - mkdir build
+  - cd build
   - cmake ../
+  - make all
+  - ./travis_test
