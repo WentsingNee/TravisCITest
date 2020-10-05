@@ -5,39 +5,58 @@ git:
 
 jobs:
   include:
-    - os: linux
+
+    # linux - gcc
+    - name: linux-gcc-98
+      os: linux
       compiler: gcc
       env: CXX_STANDARD=98
 
-    - os: linux
+    - name: linux-gcc-11
+      os: linux
       compiler: gcc
       env: CXX_STANDARD=11
 
-    - os: linux
+    - name: linux-gcc-14
+      os: linux
       compiler: gcc
       env: CXX_STANDARD=14
 
-    - os: linux
+    - name: linux-gcc-17
+      os: linux
+      compiler: gcc
+      env: CXX_STANDARD=17
+
+    # linux - clang
+    - name: linux-clang-98
+      os: linux
       compiler: clang
       env: CXX_STANDARD=98
 
-    - os: linux
+    - name: linux-clang-11
+      os: linux
       compiler: clang
       env: CXX_STANDARD=11
 
-    - os: linux
+    - name: linux-clang-14
+      os: linux
       compiler: clang
       env: CXX_STANDARD=14
 
-    - os: linux
+    - name: linux-clang-17
+      os: linux
       compiler: clang
       env: CXX_STANDARD=17
 
-    - os: osx
+    # osx
+    - name: osx-clang-14
+      os: osx
       compiler: clang
       env: CXX_STANDARD=14
 
-    - os: windows
+    # windows
+    - name: windows-14
+      os: windows
       env: CXX_STANDARD=14
 
 script:
