@@ -19,10 +19,25 @@ jobs:
 
     - os: linux
       compiler: clang
+      env: CXX_STANDARD=98
+
+    - os: linux
+      compiler: clang
+      env: CXX_STANDARD=11
+
+    - os: linux
+      compiler: clang
       env: CXX_STANDARD=14
+
+    - os: linux
+      compiler: clang
+      env: CXX_STANDARD=17
 
     - os: osx
       compiler: clang
+      env: CXX_STANDARD=14
+
+    - os: windows
       env: CXX_STANDARD=14
 
 script:
