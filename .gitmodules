@@ -1,0 +1,3 @@
+[submodule "include/Kerbal"]
+	path = include/Kerbal
+	url = https://github.com/WentsingNee/Kerbal.git
