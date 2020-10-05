@@ -1,5 +1,8 @@
 language: cpp
 
+git:
+  depth: 5
+
 matrix:
   include:
     - os: linux
@@ -14,6 +17,6 @@ matrix:
 script:
   - mkdir build
   - cd build
-  - cmake ../
+  - cmake ../ -DCMAKE_CXX_STANDARD=11 -DCMAKE_BUILD_TYPE=Release
   - make all
   - ./travis_test
